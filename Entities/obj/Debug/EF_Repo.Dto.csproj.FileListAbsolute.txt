@@ -6,6 +6,7 @@ C:\Users\gonzalezwf\source\repos\EFusePatternRepository\Entities\obj\Debug\Entit
 C:\Users\gonzalezwf\source\repos\EFusePatternRepository\Entities\obj\Debug\Entities.pdb
 D:\RespositoriosGit\PatternRepositoryCrudEF\Entities\bin\Debug\Entities.dll
 D:\RespositoriosGit\PatternRepositoryCrudEF\Entities\bin\Debug\Entities.pdb
+D:\RespositoriosGit\PatternRepositoryCrudEF\Entities\obj\Debug\EF_Repo.Dto.csprojAssemblyReference.cache
 D:\RespositoriosGit\PatternRepositoryCrudEF\Entities\obj\Debug\EF_Repo.Dto.csproj.CoreCompileInputs.cache
 D:\RespositoriosGit\PatternRepositoryCrudEF\Entities\obj\Debug\Entities.dll
 D:\RespositoriosGit\PatternRepositoryCrudEF\Entities\obj\Debug\Entities.pdb

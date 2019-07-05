@@ -23,10 +23,12 @@ D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\PatternR
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\PatternRepository.pdb
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\AdoNetEntity.dll
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\AutoMapper.dll
+D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\Entities.dll
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\EntityFramework.dll
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\EntityFramework.SqlServer.dll
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\AdoNetEntity.pdb
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\AdoNetEntity.dll.config
+D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\Entities.pdb
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\AutoMapper.pdb
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\AutoMapper.xml
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\EntityFramework.xml

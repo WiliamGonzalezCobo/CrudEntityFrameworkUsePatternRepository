@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\UserDetailDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
@@ -59,6 +60,10 @@
     <ProjectReference Include="..\AdoNetEntity\AdoNetEntity.csproj">
       <Project>{ba094e0e-df9c-40ca-b80c-aedcc837b437}</Project>
       <Name>AdoNetEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\EF_Repo.Dto.csproj">
+      <Project>{5e79f10a-a132-47e8-ba2b-6ffd5187a0af}</Project>
+      <Name>EF_Repo.Dto</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

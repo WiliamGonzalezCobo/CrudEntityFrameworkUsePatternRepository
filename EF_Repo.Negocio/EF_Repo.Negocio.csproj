@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,10 +45,6 @@
     <Compile Include="UserDetailBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AdoNetEntity\AdoNetEntity.csproj">
-      <Project>{ba094e0e-df9c-40ca-b80c-aedcc837b437}</Project>
-      <Name>AdoNetEntity</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entities\EF_Repo.Dto.csproj">
       <Project>{5e79f10a-a132-47e8-ba2b-6ffd5187a0af}</Project>
       <Name>EF_Repo.Dto</Name>
