@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using AdoNetEntity;
+using PatternRepository.Specification;
 
 namespace EF_Repo.PatternRepository
 {
@@ -18,10 +19,11 @@ namespace EF_Repo.PatternRepository
             entities = context.Set<T>();
         }
 
-        public IEnumerable<T> GetAll()
-
+        public IReadOnlyList<T> GetAll(Specification<T> specification)
         {
-            return this.entities.ToList();
+            return this.entities
+                .Where(specification.ToExpression())
+                .ToList();
         }
 
         public T GetById(Object id)

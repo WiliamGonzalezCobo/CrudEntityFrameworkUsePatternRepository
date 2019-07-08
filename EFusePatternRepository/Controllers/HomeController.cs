@@ -28,8 +28,15 @@ namespace EFusePatternRepository.Controllers
 
         public ActionResult Usuarios()
         {
+            var test1 = userDetailBusiness.GetUsersName("william");
+            var test2 = userDetailBusiness.GetUsersEmail("wifagoco@gmail.com");
+            var test3 = userDetailBusiness.GetUsersAll();
+            var test4 = userDetailBusiness.GetUsersCity("cali");
+            IReadOnlyList<UserDetailDto> test5 = userDetailBusiness.GetUsersCityAndName("cali", "felipe");
+            var test6 = userDetailBusiness.ValidMail("wifigoco@gmail.com",test5.FirstOrDefault());
+
             mapper = configMapUserDtoToUserModel.CreateMapper();
-            return View(mapper.Map<IEnumerable<UserDetailDto>, IEnumerable<UserDetailModel>>(userDetailBusiness.GetUsersAll()));
+            return View(mapper.Map<IReadOnlyList<UserDetailDto>, IReadOnlyList<UserDetailModel>>(userDetailBusiness.GetUsersAll()));
         }
 
         public ActionResult AgregarUsuario()

@@ -13,9 +13,34 @@ namespace EF_Repo.Negocio
             userDetailDao = new UserDetailDao();
         }
 
-        public IEnumerable<UserDetailDto> GetUsersAll()
+        public IReadOnlyList<UserDetailDto> GetUsersAll()
         {
             return userDetailDao.GetUsersAll();
+        }
+
+        public IReadOnlyList<UserDetailDto> GetUsersEmail(string email)
+        {
+            return userDetailDao.GetUsersEmail(email);
+        }
+
+        public IReadOnlyList<UserDetailDto> GetUsersName(string name)
+        {
+            return userDetailDao.GetUsersName(name);
+        }
+
+        public IReadOnlyList<UserDetailDto> GetUsersCity(string city)
+        {
+            return userDetailDao.GetUsersCity(city);
+        }
+
+        public IReadOnlyList<UserDetailDto> GetUsersCityAndName(string city,string name)
+        {
+            return userDetailDao.GetUsersCityAndName(city, name);
+        }
+
+        public bool ValidMail(string mail, UserDetailDto userDto)
+        {
+            return userDetailDao.ValidMail(mail, userDto);
         }
 
         public void AddUser(UserDetailDto userDto)

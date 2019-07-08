@@ -55,6 +55,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Specification\EntitiesSpecifications\UserDetailSpecifications.cs" />
+    <Compile Include="Specification\ParameterReplacer.cs" />
+    <Compile Include="Specification\Specification.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdoNetEntity\AdoNetEntity.csproj">
@@ -70,5 +73,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
