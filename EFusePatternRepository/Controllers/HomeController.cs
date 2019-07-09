@@ -5,25 +5,18 @@ using System.Web;
 using System.Web.Mvc;
 using EF_Repo.Negocio;
 using EF_Repo.Dto;
-using AutoMapper;
 using EFusePatternRepository.Models;
+using EF_Repo.Utils.MapperBase;
 
 namespace EFusePatternRepository.Controllers
 {
     public class HomeController : Controller
     {
         private UserDetailBusiness userDetailBusiness;
-        private MapperConfiguration configMapUserDtoToUserModel;
-        private MapperConfiguration configMapUserModelToUserDto;
-        private IMapper mapper;
         private UserDetailModel userModel;
         public HomeController()
         {
-
             userDetailBusiness = new UserDetailBusiness();
-            configMapUserDtoToUserModel = new MapperConfiguration(cfg => cfg.CreateMap<UserDetailDto, UserDetailModel>());
-            configMapUserModelToUserDto = new MapperConfiguration(cfg => cfg.CreateMap<UserDetailModel, UserDetailDto>());
-
         }
 
         public ActionResult Usuarios()
@@ -35,8 +28,7 @@ namespace EFusePatternRepository.Controllers
             IReadOnlyList<UserDetailDto> test5 = userDetailBusiness.GetUsersCityAndName("cali", "felipe");
             var test6 = userDetailBusiness.ValidMail("wifigoco@gmail.com",test5.FirstOrDefault());
 
-            mapper = configMapUserDtoToUserModel.CreateMapper();
-            return View(mapper.Map<IReadOnlyList<UserDetailDto>, IReadOnlyList<UserDetailModel>>(userDetailBusiness.GetUsersAll()));
+            return View(MapperConfigurationCentral<UserDetailDto, UserDetailModel>.MapList(userDetailBusiness.GetUsersAll()));
         }
 
         public ActionResult AgregarUsuario()
@@ -49,8 +41,7 @@ namespace EFusePatternRepository.Controllers
         {
             if (ModelState.IsValid)
             {
-                mapper = configMapUserModelToUserDto.CreateMapper();
-                userDetailBusiness.AddUser(mapper.Map<UserDetailDto>(model));
+                userDetailBusiness.AddUser(MapperConfigurationCentral<UserDetailModel,UserDetailDto>.MapEntity(model));
             }
             return RedirectToAction("Usuarios");
         }
@@ -60,8 +51,7 @@ namespace EFusePatternRepository.Controllers
 
             if (id.HasValue)
             {
-                mapper = configMapUserDtoToUserModel.CreateMapper();
-                userModel = mapper.Map<UserDetailModel>(userDetailBusiness.GetUserById(id.Value));
+                userModel = MapperConfigurationCentral<UserDetailDto,UserDetailModel>.MapEntity(userDetailBusiness.GetUserById(id.Value));
             }
             else
             {
@@ -75,8 +65,7 @@ namespace EFusePatternRepository.Controllers
         {
             if (ModelState.IsValid)
             {
-                mapper = configMapUserModelToUserDto.CreateMapper();
-                userDetailBusiness.UpdateUser(mapper.Map<UserDetailDto>(model));
+                userDetailBusiness.UpdateUser(MapperConfigurationCentral<UserDetailModel,UserDetailDto>.MapEntity(model));
             }
             return RedirectToAction("Usuarios");
         }
@@ -86,8 +75,7 @@ namespace EFusePatternRepository.Controllers
 
             if (id.HasValue)
             {
-                mapper = configMapUserDtoToUserModel.CreateMapper();
-                userModel = mapper.Map<UserDetailModel>(userDetailBusiness.GetUserById(id.Value));
+                userModel = MapperConfigurationCentral<UserDetailDto,UserDetailModel>.MapEntity(userDetailBusiness.GetUserById(id.Value));
             }
             else
             {
@@ -101,8 +89,7 @@ namespace EFusePatternRepository.Controllers
         {
             if (ModelState.IsValid)
             {
-                mapper = configMapUserModelToUserDto.CreateMapper();
-                userDetailBusiness.DeleteUser(mapper.Map<UserDetailDto>(model).Id);
+                userDetailBusiness.DeleteUser(MapperConfigurationCentral<UserDetailModel,UserDetailDto>.MapEntity(model).Id);
             }
             return RedirectToAction("Usuarios");
         }

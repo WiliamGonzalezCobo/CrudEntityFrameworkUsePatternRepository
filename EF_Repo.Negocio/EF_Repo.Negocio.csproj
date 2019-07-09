@@ -45,6 +45,10 @@
     <Compile Include="UserDetailBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EF_Repo.Utils\EF_Repo.Utils.csproj">
+      <Project>{9a76abb5-9d1b-47ef-86f7-a9ff8a9e975a}</Project>
+      <Name>EF_Repo.Utils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entities\EF_Repo.Dto.csproj">
       <Project>{5e79f10a-a132-47e8-ba2b-6ffd5187a0af}</Project>
       <Name>EF_Repo.Dto</Name>
@@ -53,9 +57,6 @@
       <Project>{c2f014d9-58e5-487f-8023-766b4d23db10}</Project>
       <Name>EF_Repo.PatternRepository</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

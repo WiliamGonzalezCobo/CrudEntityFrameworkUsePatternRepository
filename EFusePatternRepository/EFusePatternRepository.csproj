@@ -45,9 +45,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -197,6 +194,10 @@
     <ProjectReference Include="..\EF_Repo.Negocio\EF_Repo.Negocio.csproj">
       <Project>{911827e6-6499-482f-a91b-392561ba75d5}</Project>
       <Name>EF_Repo.Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EF_Repo.Utils\EF_Repo.Utils.csproj">
+      <Project>{9a76abb5-9d1b-47ef-86f7-a9ff8a9e975a}</Project>
+      <Name>EF_Repo.Utils</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entities\EF_Repo.Dto.csproj">
       <Project>{5e79f10a-a132-47e8-ba2b-6ffd5187a0af}</Project>

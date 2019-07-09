@@ -38,3 +38,5 @@ D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Negocio\obj\Debug\EF_Repo.Ne
 D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Negocio\obj\Debug\EF_Repo.Negocio.csproj.CopyComplete
 D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Negocio\obj\Debug\EF_Repo.Negocio.dll
 D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Negocio\obj\Debug\EF_Repo.Negocio.pdb
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Negocio\bin\Debug\EF_Repo.Utils.dll
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Negocio\bin\Debug\EF_Repo.Utils.pdb

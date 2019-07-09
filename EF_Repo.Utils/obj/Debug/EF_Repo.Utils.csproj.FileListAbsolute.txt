@@ -1,0 +1,9 @@
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\bin\Debug\EF_Repo.Utils.dll
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\bin\Debug\EF_Repo.Utils.pdb
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\bin\Debug\AutoMapper.dll
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\bin\Debug\AutoMapper.pdb
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\bin\Debug\AutoMapper.xml
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\obj\Debug\EF_Repo.Utils.csproj.CoreCompileInputs.cache
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\obj\Debug\EF_Repo.Utils.csproj.CopyComplete
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\obj\Debug\EF_Repo.Utils.dll
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\obj\Debug\EF_Repo.Utils.pdb

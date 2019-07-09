@@ -38,3 +38,5 @@ D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\obj\Debug\EF_Repo.
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\obj\Debug\EF_Repo.PatternRepository.csproj.CopyComplete
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\obj\Debug\PatternRepository.dll
 D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\obj\Debug\PatternRepository.pdb
+D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\EF_Repo.Utils.dll
+D:\RespositoriosGit\PatternRepositoryCrudEF\PatternRepository\bin\Debug\EF_Repo.Utils.pdb

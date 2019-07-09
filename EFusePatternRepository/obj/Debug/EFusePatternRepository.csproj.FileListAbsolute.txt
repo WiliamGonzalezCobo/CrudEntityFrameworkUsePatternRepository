@@ -184,3 +184,5 @@ D:\RespositoriosGit\PatternRepositoryCrudEF\EFusePatternRepository\obj\Debug\EFu
 D:\RespositoriosGit\PatternRepositoryCrudEF\EFusePatternRepository\obj\Debug\EFusePatternRepository.csproj.CopyComplete
 D:\RespositoriosGit\PatternRepositoryCrudEF\EFusePatternRepository\obj\Debug\EFusePatternRepository.dll
 D:\RespositoriosGit\PatternRepositoryCrudEF\EFusePatternRepository\obj\Debug\EFusePatternRepository.pdb
+D:\RespositoriosGit\PatternRepositoryCrudEF\EFusePatternRepository\bin\EF_Repo.Utils.dll
+D:\RespositoriosGit\PatternRepositoryCrudEF\EFusePatternRepository\bin\EF_Repo.Utils.pdb
