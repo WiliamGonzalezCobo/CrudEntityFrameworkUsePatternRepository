@@ -7,3 +7,4 @@ D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\obj\Debug\EF_Repo.Util
 D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\obj\Debug\EF_Repo.Utils.csproj.CopyComplete
 D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\obj\Debug\EF_Repo.Utils.dll
 D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\obj\Debug\EF_Repo.Utils.pdb
+D:\RespositoriosGit\PatternRepositoryCrudEF\EF_Repo.Utils\obj\Debug\EF_Repo.Utils.csprojAssemblyReference.cache

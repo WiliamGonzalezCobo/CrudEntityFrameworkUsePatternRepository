@@ -56,7 +56,6 @@ namespace PatternRepository.Specification
         }
     }
 
-
     public class OrSpecification<T> : Specification<T>
     {
         private readonly Specification<T> _left;

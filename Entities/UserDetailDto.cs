@@ -8,7 +8,7 @@ namespace EF_Repo.Dto
 {
     public class UserDetailDto
     {
-        public int Id { get; set; }
+        public int IdUserDetail { get; set; }
         public string Name { get; set; }
         public string EmailId { get; set; }
         public string City { get; set; }

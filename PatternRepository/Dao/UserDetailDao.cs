@@ -5,6 +5,8 @@ using AdoNetEntity;
 using EF_Repo.Dto;
 using PatternRepository.Specification.EntitiesSpecifications;
 using EF_Repo.Utils.MapperBase;
+using AutoMapper;
+
 
 namespace PatternRepository.Dao
 {
@@ -19,31 +21,31 @@ namespace PatternRepository.Dao
         public IReadOnlyList<UserDetailDto> GetUsersAll()
         {
             var all = new UserDetailAllSpecifications();
-            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapList(repository.GetAll(all));
+            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapList(repository.GetAll(all), SpecificationMapper.SpecificationMapper.UserDetailToDto);
         }
 
         public IReadOnlyList<UserDetailDto> GetUsersName(string name)
         {
             var userxName = new UserDetailxNombreSpecifications(name);
-            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapList(repository.GetAll(userxName));
+            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapList(repository.GetAll(userxName),SpecificationMapper.SpecificationMapper.UserDetailToDto);
         }
 
         public IReadOnlyList<UserDetailDto> GetUsersEmail(string email)
         {
             var userxEmail = new UserDetailxEmailSpecifications(email);
-            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapList(repository.GetAll(userxEmail));
+            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapList(repository.GetAll(userxEmail),SpecificationMapper.SpecificationMapper.UserDetailToDto);
         }
 
         public IReadOnlyList<UserDetailDto> GetUsersCity(string city)
         {
             var userxCity = new UserDetailxCitySpecifications(city);
-            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapList(repository.GetAll(userxCity));
+            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapList(repository.GetAll(userxCity),SpecificationMapper.SpecificationMapper.UserDetailToDto);
         }
 
         public IReadOnlyList<UserDetailDto> GetUsersCityAndName(string city, string name)
         {
             var userxCityAndName = new UserDetailxCitySpecifications(city).And(new UserDetailxNombreSpecifications(name));
-            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapList(repository.GetAll(userxCityAndName));
+            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapList(repository.GetAll(userxCityAndName),SpecificationMapper.SpecificationMapper.UserDetailToDto);
         }
 
         public bool ValidMail(string mail, UserDetailDto userDetailDto)
@@ -54,21 +56,21 @@ namespace PatternRepository.Dao
 
         public void AddUser(UserDetailDto userDto)
         {
-            repository.Add(MapperConfigurationCentral<UserDetailDto, UserDetails>.MapEntity(userDto));
+            repository.Add(MapperConfigurationCentral<UserDetailDto, UserDetails>.MapEntity(userDto, SpecificationMapper.SpecificationMapper.UserDtoToDetail));
             repository.Save();
             repository.Dispose();
         }
 
         public void UpdateUser(UserDetailDto userDto)
         {
-            repository.Update(MapperConfigurationCentral<UserDetailDto, UserDetails>.MapEntity(userDto));
+            repository.Update(MapperConfigurationCentral<UserDetailDto, UserDetails>.MapEntity(userDto,SpecificationMapper.SpecificationMapper.UserDtoToDetail));
             repository.Save();
             repository.Dispose();
         }
 
         public UserDetailDto GetUserById(int id)
         {
-            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapEntity(repository.GetById(id));
+            return MapperConfigurationCentral<UserDetails, UserDetailDto>.MapEntity(repository.GetById(id),SpecificationMapper.SpecificationMapper.UserDetailToDto);
         }
 
         public void DeleteUser(int id)

@@ -7,6 +7,7 @@ using EF_Repo.Negocio;
 using EF_Repo.Dto;
 using EFusePatternRepository.Models;
 using EF_Repo.Utils.MapperBase;
+using EFusePatternRepository.SpecificationMapper;
 
 namespace EFusePatternRepository.Controllers
 {
@@ -21,14 +22,16 @@ namespace EFusePatternRepository.Controllers
 
         public ActionResult Usuarios()
         {
-            var test1 = userDetailBusiness.GetUsersName("william");
-            var test2 = userDetailBusiness.GetUsersEmail("wifagoco@gmail.com");
-            var test3 = userDetailBusiness.GetUsersAll();
-            var test4 = userDetailBusiness.GetUsersCity("cali");
-            IReadOnlyList<UserDetailDto> test5 = userDetailBusiness.GetUsersCityAndName("cali", "felipe");
-            var test6 = userDetailBusiness.ValidMail("wifigoco@gmail.com",test5.FirstOrDefault());
+            //var test1 = userDetailBusiness.GetUsersName("william");
+            //var test2 = userDetailBusiness.GetUsersEmail("wifagoco@gmail.com");
+            //var test3 = userDetailBusiness.GetUsersAll();
+            //var test4 = userDetailBusiness.GetUsersCity("cali");
+            //IReadOnlyList<UserDetailDto> test5 = userDetailBusiness.GetUsersCityAndName("cali", "felipe");
+            //if (test5.Any()) {
+            //    var test6 = userDetailBusiness.ValidMail("wifigoco@gmail.com", test5.FirstOrDefault());
+            //}
 
-            return View(MapperConfigurationCentral<UserDetailDto, UserDetailModel>.MapList(userDetailBusiness.GetUsersAll()));
+            return View(MapperConfigurationCentral<UserDetailDto, UserDetailModel>.MapList(userDetailBusiness.GetUsersAll(), SpecificationMapper.SpecificationMapper.UserDetailDtoToModel));
         }
 
         public ActionResult AgregarUsuario()
@@ -41,7 +44,7 @@ namespace EFusePatternRepository.Controllers
         {
             if (ModelState.IsValid)
             {
-                userDetailBusiness.AddUser(MapperConfigurationCentral<UserDetailModel,UserDetailDto>.MapEntity(model));
+                userDetailBusiness.AddUser(MapperConfigurationCentral<UserDetailModel, UserDetailDto>.MapEntity(model));
             }
             return RedirectToAction("Usuarios");
         }
@@ -51,7 +54,7 @@ namespace EFusePatternRepository.Controllers
 
             if (id.HasValue)
             {
-                userModel = MapperConfigurationCentral<UserDetailDto,UserDetailModel>.MapEntity(userDetailBusiness.GetUserById(id.Value));
+                userModel = MapperConfigurationCentral<UserDetailDto, UserDetailModel>.MapEntity(userDetailBusiness.GetUserById(id.Value), SpecificationMapper.SpecificationMapper.UserDetailDtoToModel);
             }
             else
             {
@@ -65,7 +68,7 @@ namespace EFusePatternRepository.Controllers
         {
             if (ModelState.IsValid)
             {
-                userDetailBusiness.UpdateUser(MapperConfigurationCentral<UserDetailModel,UserDetailDto>.MapEntity(model));
+                userDetailBusiness.UpdateUser(MapperConfigurationCentral<UserDetailModel, UserDetailDto>.MapEntity(model, SpecificationMapper.SpecificationMapper.UserDetailModelToDto));
             }
             return RedirectToAction("Usuarios");
         }
@@ -75,7 +78,7 @@ namespace EFusePatternRepository.Controllers
 
             if (id.HasValue)
             {
-                userModel = MapperConfigurationCentral<UserDetailDto,UserDetailModel>.MapEntity(userDetailBusiness.GetUserById(id.Value));
+                userModel = MapperConfigurationCentral<UserDetailDto, UserDetailModel>.MapEntity(userDetailBusiness.GetUserById(id.Value), SpecificationMapper.SpecificationMapper.UserDetailDtoToModel);
             }
             else
             {
@@ -89,7 +92,7 @@ namespace EFusePatternRepository.Controllers
         {
             if (ModelState.IsValid)
             {
-                userDetailBusiness.DeleteUser(MapperConfigurationCentral<UserDetailModel,UserDetailDto>.MapEntity(model).Id);
+                userDetailBusiness.DeleteUser(MapperConfigurationCentral<UserDetailModel, UserDetailDto>.MapEntity(model, SpecificationMapper.SpecificationMapper.UserDetailModelToDto).IdUserDetail);
             }
             return RedirectToAction("Usuarios");
         }
